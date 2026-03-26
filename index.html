@@ -49,25 +49,27 @@
 
     <!-- Navigation -->
     <nav class="glass-nav fixed top-0 w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-sv-blue rounded-full flex items-center justify-center text-sv-accent font-bold text-xl border-2 border-sv-accent">SVA</div>
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="https://tinyurl.com/3srphptd">
                 <span class="text-sv-blue font-extrabold text-xl hidden md:block">SV Achternmeer</span>
-            </div>
-            
-            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700">
-                <a href="#aktuelles" class="hover:text-sv-blue transition">Aktuelles</a>
-                <a href="#abteilungen" class="hover:text-sv-blue transition">Abteilungen</a>
-                <a href="#mitgliedschaft" class="hover:text-sv-blue transition">Mitgliedschaft</a>
-                <a href="#shop" class="hover:text-sv-blue transition">Fanshop</a>
-                <a href="#kontakt" class="hover:text-sv-blue transition">Kontakt</a>
-            </div>
-
-            <button class="lg:hidden text-sv-blue text-2xl" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+            </a>
         </div>
-    </nav>
+        
+        <div class="hidden lg:flex space-x-8 font-semibold text-gray-700">
+            <a href="#aktuelles" class="hover:text-sv-blue transition">Aktuelles</a>
+            <a href="#abteilungen" class="hover:text-sv-blue transition">Abteilungen</a>
+            <a href="#mitgliedschaft" class="hover:text-sv-blue transition">Mitgliedschaft</a>
+            <a href="#shop" class="hover:text-sv-blue transition">Fanshop</a>
+            <a href="#kontakt" class="hover:text-sv-blue transition">Kontakt</a>
+        </div>
+
+        <button class="lg:hidden text-sv-blue text-2xl" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-sv-blue z-[60] flex flex-col items-center justify-center space-y-8 text-white text-2xl font-bold hidden">
