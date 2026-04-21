@@ -62,6 +62,7 @@
             <a href="#abteilungen" class="hover:text-sv-blue transition">Abteilungen</a>
             <a href="#mitgliedschaft" class="hover:text-sv-blue transition">Mitgliedschaft</a>
             <a href="#shop" class="hover:text-sv-blue transition">Fanshop</a>
+            <a href="#sponsoren" class="hover:text-sv-blue transition">Sponsoren</a>
             <a href="#kontakt" class="hover:text-sv-blue transition">Kontakt</a>
         </div>
 
@@ -78,6 +79,7 @@
         <a href="#abteilungen" onclick="toggleMenu()">Abteilungen</a>
         <a href="#mitgliedschaft" onclick="toggleMenu()">Mitgliedschaft</a>
         <a href="#shop" onclick="toggleMenu()">Fanshop</a>
+        <a href="#sponsoren" onclick="toggleMenu()">Sponsoren</a>
         <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
     </div>
 
@@ -94,7 +96,7 @@
                 <a href="#mitgliedschaft" class="bg-white text-sv-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">Mitglied werden</a>
             </div>
         </div>
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
             <a href="#aktuelles" class="text-white text-3xl"><i class="fas fa-chevron-down"></i></a>
         </div>
     </header>
@@ -284,6 +286,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+        <!-- Sponsoren -->
+    <section id="sponsoren" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-sv-blue font-bold uppercase tracking-widest text-sm">Unsere Partner</span>
+            <h2 class="text-4xl font-black text-gray-900 mt-2 mb-12">Sponsoren</h2>
+            
+            <!-- Collage aus 8 Logos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <img src="images/sponsors/sponsor1.png" alt="Sponsor 1" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor2.png" alt="Sponsor 2" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor3.png" alt="Sponsor 3" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor4.png" alt="Sponsor 4" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor5.png" alt="Sponsor 5" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor6.png" alt="Sponsor 6" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor7.png" alt="Sponsor 7" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+                <img src="images/sponsors/sponsor8.png" alt="Sponsor 8" class="w-full h-16 object-contain cursor-pointer hover:opacity-75 transition" onclick="openSponsorsModal()">
+            </div>
+            
+            <button onclick="openSponsorsModal()" class="bg-sv-accent text-sv-blue px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-lg">Alle Sponsoren anzeigen</button>
         </div>
     </section>
 
@@ -521,6 +545,23 @@
         }
 
         window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+                function openSponsorsModal() {
+            let html = `
+                <div class="mb-8">
+                    <span class="text-sv-blue font-bold uppercase tracking-widest text-sm">Unsere Sponsoren</span>
+                    <h2 class="text-3xl font-black text-gray-900 mt-2">Alle Partner des SV Achternmeer</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            `;
+            
+            for (let i = 1; i <= 26; i++) {
+                html += `<img src="images/sponsors/sponsor${i}.png" alt="Sponsor ${i}" class="w-full h-16 object-contain">`;
+            }
+            
+            html += `</div>`;
+            openModal(html);
+        }
     </script>
 </body>
 </html>
